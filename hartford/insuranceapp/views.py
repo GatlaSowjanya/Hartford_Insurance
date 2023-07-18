@@ -13,6 +13,7 @@ ur_role = ''
 def user_reg(request):
     global fn, ln, em, pwd, mno, ur_role
     if request.method == "POST":
+        # To conncet mysql DB
         m = sql.connect(host="localhost", user="root", passwd="Mypassword", database='mysqldb')
         cursor = m.cursor()
         d = request.POST
